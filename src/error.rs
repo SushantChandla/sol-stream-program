@@ -1,6 +1,6 @@
 use thiserror::Error;
 
-use solana_program::program_error::ProgramError;
+use solana_program::{msg, program_error::ProgramError};
 
 #[derive(Error, Debug, Copy, Clone)]
 pub enum StreamError {
@@ -14,11 +14,11 @@ pub enum StreamError {
     InvalidStartOrEndTime,
     #[error("Receiver does not own enough tokens")]
     WithdrawError,
-
 }
 
 impl From<StreamError> for ProgramError {
     fn from(e: StreamError) -> Self {
+        msg!("{}", e);
         ProgramError::Custom(e as u32)
     }
 }
