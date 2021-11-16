@@ -16,7 +16,6 @@ pub enum StreamInstruction {
     /// `[writable]` escrow account, it will hold all necessary info about the trade.
     /// `[signer]` sender account
     /// `[]` receiver account
-    /// `[]` The rent sysvar
     /// `[]` Admin account
     CreateStream(CreateStreamInput),
 

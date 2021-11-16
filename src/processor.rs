@@ -56,9 +56,9 @@ impl Processor {
         }
 
         // 0.03 sol token admin account fee
-        // 300000000 Lamports = 0.03 sol
-        **escrow_account.try_borrow_mut_lamports()? -= 300000000;
-        **admin_account.try_borrow_mut_lamports()? += 300000000;
+        // 30000000 Lamports = 0.03 sol
+        **escrow_account.try_borrow_mut_lamports()? -= 30000000;
+        **admin_account.try_borrow_mut_lamports()? += 30000000;
 
         if data.end_time <= data.start_time || data.start_time < Clock::get()?.unix_timestamp {
             return Err(StreamError::InvalidStartOrEndTime.into());

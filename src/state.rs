@@ -37,3 +37,18 @@ impl StreamData {
         }
     }
 }
+
+// Added this test to check the size of the StreamData
+#[test]
+fn check_size() {
+    let stream = StreamData {
+        start_time: 0,
+        end_time: 0,
+        receiver: Pubkey::new_unique(),
+        sender: Pubkey::new_unique(),
+        lamports_withdrawn: 0,
+        amount_second: 0,
+    };
+    let compress = stream.try_to_vec().expect("something");
+    println!("{}", compress.len())
+}
