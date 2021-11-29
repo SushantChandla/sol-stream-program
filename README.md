@@ -1,6 +1,5 @@
 # SOL Stream Program
-Real-time streaming can be understood as a constant flow of assets from one wallet to another over a period of time. It simplifies transactions and also enables a trustless environment. Subscription services or freelancers can use streaming transactions to maintain a trustless environment with their customers. There are many uses of this concept. You can check out the [SuperFluid](https://www.superfluid.finance/home) protocol built on the Ethereum network as an example.
-
+Real-time streaming can be understood as a constant flow of assets from one wallet to another over a period of time. It simplifies transactions and also enables a trustless environment. Subscription services or freelancers can use streaming transactions to maintain a trustless environment with their customers. There are many uses of this concept.
 
 ## Links:
 
