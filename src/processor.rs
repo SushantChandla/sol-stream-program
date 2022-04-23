@@ -147,6 +147,7 @@ impl Processor {
         }
 
         **receiver_account.try_borrow_mut_lamports()? += lamport_streamed_to_receiver;
+        **escrow_account.try_borrow_mut_lamports()? -= lamport_streamed_to_receiver;
         escrow_data.lamports_withdrawn += lamport_streamed_to_receiver;
         **sender_account.try_borrow_mut_lamports()? += **escrow_account.lamports.borrow();
 
